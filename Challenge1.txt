@@ -1,0 +1,11 @@
+#Challenge 1
+
+1. Created one GCS storage bucket with named "project11112"
+2. created 2 HTML file named as "index.html" and "error.html"
+3. created one load balancer with project named "myproject" 
+4. Gave the public access to the bucket.
+5. added the http configuartion frontend a port and added backend configuartion with the bucket "project11112"
+created the github reposotory and connected with the GCP reposotory.
+
+created the GitHUb project
+https://github.com/asrekarpreeti/GCP_ProjectOne

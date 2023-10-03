@@ -1,0 +1,22 @@
+#Challenge #3
+
+def get_nested_value(data, key):
+    keys = key.split("/") 
+    current = data
+
+    try:
+        for k in keys:
+            current = current[k]
+        return current
+    except (KeyError, TypeError):
+        return None 
+
+object1 = {"a": {"b": {"c": "d"}}}
+key1 = "a/b/c"
+result1 = get_nested_value(object1, key1)
+print(result1) 
+
+object2 = {"x": {"y": {"z": "a"}}}
+key2 = "x/y/z"
+result2 = get_nested_value(object2, key2)
+print(result2)

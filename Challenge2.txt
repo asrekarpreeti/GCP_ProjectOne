@@ -1,0 +1,22 @@
+#Challenge #2
+import requests
+import json
+
+# metadata server url
+metadata_url = "https://console.cloud.google.com/storage/browser/project11112?recursive=true"
+
+# JSON format "Metadata-Flavor" of "Google"
+headers = {"Metadata-Flavor": "Google"}
+
+# sending a get requests
+response = requests.get(metadata_url, headers=headers)
+
+# Check the status code 200
+if response.status_code!= 204 and response.headers["content-type"].strip().startswith("application/json"):
+    # parsing the json response
+    metadata_json = response.json()
+
+    # result of JSON format of data
+    print(json.dumps(metadata_json, indent=4))
+else:
+    print(f"Failed to retrieve metadata. Status code: {response.status_code}")
